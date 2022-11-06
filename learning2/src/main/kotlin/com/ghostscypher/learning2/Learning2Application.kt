@@ -1,11 +1,11 @@
-package com.example.learning
+package com.ghostscypher.learning2
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class DemoApplication
+class Learning2Application
 
 fun main(args: Array<String>) {
-	runApplication<DemoApplication>(*args)
+	runApplication<Learning2Application>(*args)
 }

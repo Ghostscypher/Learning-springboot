@@ -1,4 +1,4 @@
-package com.ghostscypher.planefinder
+package com.ghostscypher.jokesfinder
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest

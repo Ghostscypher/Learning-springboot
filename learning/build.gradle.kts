@@ -15,14 +15,30 @@ repositories {
 	mavenCentral()
 }
 
+configurations {
+	compileOnly {
+		extendsFrom(configurations.annotationProcessor.get())
+	}
+}
+
+
 dependencies {
+	// Implementation Dependencies
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.springframework.boot:spring-boot-starter")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation("org.springframework.boot:spring-boot-starter-actuator")
+
+	// Annotation Processor Dependencies/Compile Only Dependencies
+	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
+	
+	// Runtime Dependencies
+	runtimeOnly("com.h2database:h2")
+
+	// Test Dependencies
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
-	testImplementation("com.h2database:h2")
 }
 
 tasks.withType<KotlinCompile> {
